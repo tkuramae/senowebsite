@@ -337,7 +337,7 @@ a.main-button-slider {
 
 
 a.main-button-slider:hover {
-  background-color: #080E2C;
+  background-color: #3c1b61;
   color: #ECF4F1;
 }
 
@@ -1451,6 +1451,7 @@ blog
 }
 
 .blog-post-thumb .img {
+  cursor: pointer;
   overflow: hidden;
   border-radius: 20px;
   position: relative;
