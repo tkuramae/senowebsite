@@ -324,10 +324,10 @@ a.main-button-slider {
   font-size: 13px;
   border-radius: 20px;
   padding: 12px 20px;
-  background-color: #3c1b61;
+  background-color: #ECF4F1;
   text-transform: uppercase;
   font-weight: bold;
-  color: #fff;
+  color: #080E2C;
   letter-spacing: 0.25px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -335,8 +335,10 @@ a.main-button-slider {
   transition: all 0.3s ease 0s;
 }
 
+
 a.main-button-slider:hover {
-  background-color: #4ec6df;
+  background-color: #080E2C;
+  color: #ECF4F1;
 }
 
 a.main-button {
@@ -1584,7 +1586,7 @@ footer .social li {
 }
 
 footer .social li a {
-  color: #9d5bd9;
+  color: #080E2C;
    text-align: center;
   background-color: #fff;
   width: 36px;
