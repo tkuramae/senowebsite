@@ -38,45 +38,45 @@
 		}
 	});
 
-	$(document).ready(function () {
-	    $(document).on("scroll", onScroll);
+	// $(document).ready(function () {
+	//     $(document).on("scroll", onScroll);
 	    
-	    //smoothscroll
-	    $('a[href^="#"]').on('click', function (e) {
-	        e.preventDefault();
-	        $(document).off("scroll");
+	//     //smoothscroll
+	//     $('a[href^="#"]').on('click', function (e) {
+	//         e.preventDefault();
+	//         $(document).off("scroll");
 	        
-	        $('a').each(function () {
-	            $(this).removeClass('active');
-	        })
-	        $(this).addClass('active');
+	//         $('a').each(function () {
+	//             $(this).removeClass('active');
+	//         })
+	//         $(this).addClass('active');
 	      
-	        var target = this.hash,
-	        menu = target;
-	       	var target = $(this.hash);
-	        $('html, body').stop().animate({
-	            scrollTop: (target.offset().top) - 130
-	        }, 500, 'swing', function () {
-	            window.location.hash = target;
-	            $(document).on("scroll", onScroll);
-	        });
-	    });
-	});
+	//         var target = this.hash,
+	//         menu = target;
+	//        	var target = $(this.hash);
+	//         $('html, body').stop().animate({
+	//             scrollTop: (target.offset().top) - 130
+	//         }, 500, 'swing', function () {
+	//             window.location.hash = target;
+	//             $(document).on("scroll", onScroll);
+	//         });
+	//     });
+	// });
 
-	function onScroll(event){
-	    var scrollPos = $(document).scrollTop();
-	    $('.nav a').each(function () {
-	        var currLink = $(this);
-	        var refElement = $(currLink.attr("href"));
-	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-	            $('.nav ul li a').removeClass("active");
-	            currLink.addClass("active");
-	        }
-	        else{
-	            currLink.removeClass("active");
-	        }
-	    });
-	}
+	// function onScroll(event){
+	//     var scrollPos = $(document).scrollTop();
+	//     $('.nav a').each(function () {
+	//         var currLink = $(this);
+	//         var refElement = $(currLink.attr("href"));
+	//         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+	//             $('.nav ul li a').removeClass("active");
+	//             currLink.addClass("active");
+	//         }
+	//         else{
+	//             currLink.removeClass("active");
+	//         }
+	//     });
+	// }
 
 
 	// Home seperator
@@ -130,15 +130,20 @@
 		});
 	}
 
-	function sendMail() {
-		// // var link = "mailto:yuzokuramae@gmail.com"
-		// // 		 + "&subject=" + encodeURIComponent(document.getElementById('name').value)
-		// // 		 + "&body=" + encodeURIComponent(document.getElementById('message').value)
-		// // ;
-		
-		// window.location.href = link;
+	var __sf = $(".sponsorsFooter ul span");
+	var __sf_cont = $(".sponsorsFooter ul");
+	var __title = $("#sponsorTitle");
 
-		alert('coe caraio')
-	}
+	__sf.mouseenter(function() {
+	$(this).addClass('hover');
+	__sf_cont.addClass('enter');
+	var __setTitle = $(this).attr("data-group-title");
+	__title.html(__setTitle);
+	}).mouseleave(function() {
+	$(this).removeClass('hover');
+	__sf_cont.removeClass('enter');
+	var __setTitle = $(__title).attr("data-default-title");
+	__title.html(__setTitle);
+	});
 
 })(window.jQuery);
