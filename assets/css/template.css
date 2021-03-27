@@ -528,7 +528,8 @@ header
 }
 
 .header-area.header-sticky .logo {
-  margin-top: 13px;
+  margin-top: 10px;
+  margin-left: 50px;
 }
 
 .header-area.header-sticky .nav {
